@@ -35,4 +35,16 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
+      - name: create testfile
+        run: |
+          touch 1.txt
+          echo 2 > 1.txt
+          
+      - name: upload artificate
+        uses: actions/upload-artifact@v2
+        with:
+          name: test1444
+          path: 1.txt
+      
+          
           
